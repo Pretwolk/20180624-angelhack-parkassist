@@ -44,9 +44,13 @@ function initMap() {
 		color = "#52ff00"
 		html = "<li style='color: "+color+"'>" + street_name + " ("+ b.side +") '" + b.between[0] +"' and '"+ b.between[1] + "' until '"+b.nextTime+" on "+ b.nextDay +"'</li>"
 	} 
-	else if(b.parking && b.period) {
+	else if(b.parking && b.period && b.nextTime && b.nextDay) {
 		color = "#52ff00"
-		html = "<li style='color: "+color+"'>" + street_name + " ("+ b.side +") '" + b.between[0] +"' and '"+ b.between[1] + "' for '"+ b.period +"'</li>"
+		html = "<li style='color: "+color+"'>" + street_name + " ("+ b.side +") '" + b.between[0] +"' and '"+ b.between[1] + "' until '"+ b.nextTime +" on " + b.nextDay + "'</li>"
+	}
+	else if(b.parking && b.period && b.nextTime && !b.nextDay)  {
+		color = "#52ff00"
+		html = "<li style='color: "+color+"'>" + street_name + " ("+ b.side +") '" + b.between[0] +"' and '"+ b.between[1] + "' until '"+ b.nextTime +"'</li>"
 	}
 	else if(!b.parking && b.period) {
 		color = "orange"

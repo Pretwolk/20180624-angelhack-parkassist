@@ -164,10 +164,10 @@ class Parkass:
                 inhours = True
             if localtime.tm_hour == endhour and localtime.tm_min < endmin:
                 inmins = True
-            if endmin == 0:
-                endmin = '00'
-            if startmin == 0:
-                startmin = '00'
+            if len(str(endmin)) == 1:
+                endmin = str(endmin) + '0'
+            if len(str(startmin)) == 1:
+                startmin = str(startmin) + '0'
             if indays and (inhours or inmins):
                 temp["parking"] = False
                 temp["nextTime"] = str(endhour) + ':' + str(endmin)
