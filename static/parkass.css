@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 5%;
+}
+
+main {
+  height: 75%;
+}
+
+footer {
+  height: 20%;
+}
+
+#map {
+  height: 100%;
+}
+

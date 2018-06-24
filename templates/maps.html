@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block main %}
+<div id="map"></div>
+{% endblock %}
+
+{% block footer %}
+<ul id="restrictionsUL">
+</ul>
+{% endblock %}
+
+{% block javascript %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd_C2QUf4mKtr9J0e016pm_YpCGzECWPY"></script>
+<script src="{{ url_for('static',filename='parkass.js') }}"></script>
+<script>
+initMap()
+</script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd_C2QUf4mKtr9J0e016pm_YpCGzECWPY&callback=initMap"></script>-->
+{% endblock %}
